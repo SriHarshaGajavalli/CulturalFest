@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>·•● Bubble • Layout ●•·</title>
-  <meta name="viewport"  content="width=768px, user-scalable=no" />
+  		<meta name="viewport" content="width = device-width, height = device-height, initial-scale = 1.0, user-scalable = yes">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.4.0/balloon.min.css">
       <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       body {
@@ -551,51 +550,36 @@ center
 }
 
     </style>
+    
     <style>
-        .c {
-            height: 40px;
-            width: 180px;
-            border-radius: 20px;
-            position: absolute;
-        }
+		@import url('https://fonts.googleapis.com/css?family=Cabin');
 
-        #id1 {
-            top: 100px;
-            left: 250px;
-            background-color: yellow;
-        }
-
-        #id2 {
-            top: 170px;
-            left: 230px;
-            background-color: orange;
-        }
-
-        #id3 {
-            top: 240px;
-            left: 210px;
-            background-color: blue;
-        }
-
-        #id4 {
-            top: 310px;
-            left: 1000px;
-            background-color: green;
-        }
-
-        #id5 {
-            position: absolute;
-            top: 380px;
-            left: 980px;
-            background-color: red;
-        }
-
-        #id6 {
-            top: 450px;
-            left: 960px;
-            background-color: purple;
-        }
-    </style>
+		.btn-title{font-family: 'Cabin', sans-serif;}
+		
+		.noSelect {
+			webkit-touch-callout: none;
+		    -webkit-user-select: none; 
+		    -khtml-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		}
+		
+		.btn1{position: fixed; left: 25%; top: 25%; width: 250px; height: 60px; background: IndianRed; border-radius: 4px; cursor: pointer; box-shadow: 0 0 7px rgba(0, 0, 0, .5);transition: all .4s ease-out}
+		.btn1:hover{box-shadow: 0 0 15px rgba(0, 0, 0, .7);}
+		
+		.btn2{position: fixed; left: 25%;top: 50%; width: 250px; height: 60px; background: tomato; border-radius: 4px; cursor: pointer; box-shadow: 0 0 7px rgba(0, 0, 0, .5);transition: all .4s ease-out}
+		.btn2:hover{box-shadow: 0 0 15px rgba(0, 0, 0, .7);}
+        
+        .btn3{position: fixed; left: 25%; top: 75%; width: 250px; height: 60px; background: #87D37C; border-radius: 4px; cursor: pointer; box-shadow: 0 0 7px rgba(0, 0, 0, .5);transition: all .4s ease-out}
+		.btn3:hover{box-shadow: 0 0 15px rgba(0, 0, 0, .7);}
+		
+		.btn4{position: fixed; left: 25%;top: 100%; width: 250px; height: 60px; background: #BF55EC; border-radius: 4px; cursor: pointer; box-shadow: 0 0 7px rgba(0, 0, 0, .5);transition: all .4s ease-out}
+		.btn4:hover{box-shadow: 0 0 15px rgba(0, 0, 0, .7);}
+		
+		</style>
+    
+    <link rel = "stylesheet" href = "css/style.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
    <script> var c = document.getElementById("c");
@@ -805,16 +789,14 @@ center
 
 </head>
 
+
 <body>
-  <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=768px, user-scalable=no"/>
-</head>
-<body>
+<!--
   <div class="by">
     <div class="by__text by__text--1">demo for</div>
     <div class="by__text by__text--2">by</div><a href="https://github.com/legomushroom/mojs" title="mojs github page" class="by__logo by__logo--mojs"></a><a href="https://twitter.com/legomushroom" title="@legomushroom on twitter" class="by__logo by__logo--legomushroom"></a>
   </div>
+-->
   <div id="js-curtain" class="curtain">
     <div class="curtain__progress-text">loading..</div>
     <div id="js-progress-gradient" class="curtain__progress-text-gradient"></div>
@@ -1361,6 +1343,29 @@ center
           <p>This section is intended to represent some project but for now has dummy placeholder and points to mo · js library.</p>
         </div>-->
           <canvas id="c"></canvas>
+          
+<!--          buttons-->
+          
+          <div data-balloon-length="medium" class = "btn1" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
+			<h2 class="noSelect btn-title" style="color: white;">Button1</h2>
+              </div></div>
+		
+		<div data-balloon-length="medium" class = "btn2" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
+			<h2 class="noSelect btn-title" style="color: white;">Button2</h2>
+            </div></div>
+          
+          <div data-balloon-length="medium" class = "btn3" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
+			<h2 class="noSelect btn-title" style="color: white;">Button3</h2>
+              </div></div>
+          
+          <div data-balloon-length="medium" class = "btn4" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
+			<h2 class="noSelect btn-title" style="color: white;">Button4</h2>
+              </div></div>
+          
+          		<script src = "js/ripple.min.js"></script>
+
+<!--          buttons-->
+          
          <!-- <div class="c" id="id1"></div>
           <div class="c" id="id2"></div>
           <div class="c" id="id3"></div>
@@ -3329,19 +3334,7 @@ center
       </div>
     </div>
   </div>
-  <style>
-    .particles {
-      width:  1675px;
-      height: 1200px;
-      margin-left: -175px;
-      margin-top: -175px;
-    }
-    .desktop .particles {
-      width:  3865px;
-      height: 2875px;
-    }
-  </style>
-</body>
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.26/howler.min.js'></script>
 <script src='https://cdn.jsdelivr.net/mojs/0.119.0/mo.min.js'></script>
 <script src='https://cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js'></script>
