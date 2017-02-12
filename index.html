@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  		<meta name="viewport" content="width = device-width, height = device-height, initial-scale = 1.0, user-scalable = yes">
+<title>Events</title>
+<link rel="stylesheet" href="css/main.css">
+    <link rel = "stylesheet" href = "animate.min.css">
+    <link rel = "stylesheet" href = "normalize.min.css">
+    <link rel="stylesheet" href="hint.css">
+</head>
+<body>
+
+
+<div id="wrap">
+<div id="showcase" class="noselect"> 
+    <a href = "#modal-01" id = "event1">
+    	<img class="cloud9-item" src="face.png">
+    </a>
+      <!--modal-->
+        <div id="modal-01">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-01"> 
+                &#215;
+            </div>
+            
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
+        
+    <a href = "#modal-02" id = "event2"><img class="cloud9-item" src="wyzo.png" alt="Wyzo"></a> 
+    <!--modal-->
+        <div id="modal-02">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-02"> 
+                &#215;
+            </div>
+            
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
+    
+    <a href = "#modal-03" id = "event3"><img class="cloud9-item" src="opera.png" alt="Opera"></a>
+    <!--modal-->
+        <div id="modal-03">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-03"> 
+                &#215;
+            </div>
+            
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
+    
+    <a href = "#modal-04" id = "event4"><img class="cloud9-item" src="chrome.png" alt="Chrome"></a>
+    <!--modal-->
+        <div id="modal-04">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-04"> 
+                &#215;
+            </div>
+            
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div> 
+    
+    <a href = "#modal-05" id = "event5"><img class="cloud9-item" src="iexplore.png" alt="Internet Explorer"></a>
+    <!--modal-->
+        <div id="modal-05">
+            <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
+            <div  id="btn-close-modal" class="close-modal-05"> 
+                &#215;
+            </div>
+            
+            <div class="modal-content">
+                <!--Your modal content goes here-->
+            </div>
+        </div>
+    
+    <img class="cloud9-item" src="safari.png" alt="Safari"> 
+    
+    <img class="cloud9-item" src="safari.png" alt="Safari">
+    
+    </div>
+<p id="item-title">&nbsp;</p>
+<div class="nav" class="noselect">
+<button class="left">  &#8249; </button>
+<button class="right"> &#8250; </button>
+</div>
+</div>
+    
+    
+    
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+    
+    <script src = "animatedModal.min.js"></script>
+    <script>
+    
+    $("#event1").animatedModal({
+                modalTarget:'modal-01',
+                animatedIn:'bounceIn',
+                animatedOut:'bounceOut',
+                color:'#3498db'
+            })
+            
+    $("#event2").animatedModal({
+                modalTarget:'modal-02',
+                animatedIn:'bounceIn',
+                animatedOut:'bounceOut',
+                color:'#2ecc71'
+            })
+            
+    $("#event3").animatedModal({
+                modalTarget:'modal-03',
+                animatedIn:'bounceIn',
+                animatedOut:'bounceOut',
+                color:'#1abc9c'
+            })
+    $("#event4").animatedModal({
+                modalTarget:'modal-04',
+                animatedIn:'bounceIn',
+                animatedOut:'bounceOut',
+                color:'#e67e22'
+            })
+            
+    $("#event5").animatedModal({
+                modalTarget:'modal-05',
+                animatedIn:'bounceIn',
+                animatedOut:'bounceOut',
+                color:'#e74c3c'
+            })
+    
+    </script>
+<script src="jquery.reflection.js"></script> 
+<script src="jquery.cloud9carousel.js"></script> 
+<script>
+    $(function() {
+      var showcase = $("#showcase")
+
+      showcase.Cloud9Carousel( {
+        yPos: 42,
+        yRadius: 48,
+        mirrorOptions: {
+          gap: 12,
+          height: 0.2
+        },
+        buttonLeft: $(".nav > .left"),
+        buttonRight: $(".nav > .right"),
+        autoPlay: true,
+        bringToFront: true,
+        onRendered: showcaseUpdated,
+        onLoaded: function() {
+          showcase.css( 'visibility', 'visible' )
+          showcase.css( 'display', 'none' )
+          showcase.fadeIn( 1500 )
+        }
+      } )
+
+      function showcaseUpdated( showcase ) {
+        var title = $('#item-title').html(
+          $(showcase.nearestItem()).attr( 'alt' )
+        )
+
+        var c = Math.cos((showcase.floatIndex() % 1) * 2 * Math.PI)
+        title.css('opacity', 0.5 + (0.5 * c))
+      }
+
+      // Simulate physical button click effect
+      $('.nav > button').click( function( e ) {
+        var b = $(e.target).addClass( 'down' )
+        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+      } )
+
+      $(document).keydown( function( e ) {
+        switch( e.keyCode ) {
+          /* left arrow */
+          case 37:
+            $('.nav > .left').click()
+            break
+
+          /* right arrow */
+          case 39:
+            $('.nav > .right').click()
+        }
+      } )
+    })
+  </script> 
+
+</body>
+</html>
