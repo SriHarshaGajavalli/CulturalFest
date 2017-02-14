@@ -24,7 +24,7 @@
   
     </style> -->
       <style>
-          a {
+          a.ba {
   position: absolute;
   top: 0;
   left: 0;
@@ -40,7 +40,7 @@
           user-select: none;
   color: white;
 }
-a::before {
+a.ba::before {
   content: '';
   position: absolute;
   top: 0;
@@ -59,10 +59,10 @@ a::before {
   -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
           transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
 }
-a:hover::before {
+a.ba:hover::before {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-a::after {
+a.ba::after {
   position: relative;
   display: inline-block;
   content: attr(data-title);
@@ -139,7 +139,7 @@ body {
   <body>
 
     <!--<div class = "back"><a href = "E:/CFest/index.html"></a></div>-->
-      <div class="a"><a href="index.html" data-title="&larrhk;"> </a></div>
+      <div class="a"><a class = "ba" href="index.html" data-title="&larrhk;"> </a></div>
 
     <div id = "impress">
 
