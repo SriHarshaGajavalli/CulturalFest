@@ -1,1 +1,126 @@
-@import url(https://fonts.googleapis.com/css?family=Cabin);.btn1,.btn2,.btn3,.btn4{position:fixed;left:25%;width:250px;height:60px;border-radius:4px;cursor:pointer;transition:all .4s ease-out}.btn-title{font-family:Cabin,sans-serif}.noSelect{webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.btn1{top:25%;background:#cd5c5c;box-shadow:0 0 7px rgba(0,0,0,.5)}.btn1:hover{box-shadow:0 0 15px rgba(0,0,0,.7)}.btn2{top:50%;background:tomato;box-shadow:0 0 7px rgba(0,0,0,.5)}.btn2:hover{box-shadow:0 0 15px rgba(0,0,0,.7)}.btn3{top:75%;background:#87D37C;box-shadow:0 0 7px rgba(0,0,0,.5)}.btn3:hover{box-shadow:0 0 15px rgba(0,0,0,.7)}.btn4{top:100%;background:#BF55EC;box-shadow:0 0 7px rgba(0,0,0,.5)}.btn4:hover{box-shadow:0 0 15px rgba(0,0,0,.7)}
+/*@import url(https://fonts.googleapis.com/css?family=Cabin);.btn1,.btn2,.btn3,.btn4{position:fixed;left:25%;width:250px;height:60px;border-radius:4px;cursor:pointer;transition:all .4s ease-out}.btn-title{font-family:Cabin,sans-serif}.noSelect{webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.btn1{top:25%;background:#cd5c5c;box-shadow:0 0 7px rgba(0,0,0,.5)}.btn1:hover{box-shadow:0 0 15px rgba(0,0,0,.7)}.btn2{top:50%;background:tomato;box-shadow:0 0 7px rgba(0,0,0,.5)}.btn2:hover{box-shadow:0 0 15px rgba(0,0,0,.7)}.btn3{top:75%;background:#87D37C;box-shadow:0 0 7px rgba(0,0,0,.5)}.btn3:hover{box-shadow:0 0 15px rgba(0,0,0,.7)}.btn4{top:100%;background:#BF55EC;box-shadow:0 0 7px rgba(0,0,0,.5)}.btn4:hover{box-shadow:0 0 15px rgba(0,0,0,.7)}*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+
+.first {
+  background-image: linear-gradient(to right, rgba(26, 188, 156, 0.6), rgba(26, 188, 156, 0.6) 5%, #1abc9c 5%, #1abc9c 10%, rgba(26, 188, 156, 0.6) 10%, rgba(26, 188, 156, 0.6) 15%, #1abc9c 15%, #1abc9c 20%, rgba(26, 188, 156, 0.6) 20%, rgba(26, 188, 156, 0.6) 25%, #1abc9c 25%, #1abc9c 30%, rgba(26, 188, 156, 0.6) 30%, rgba(26, 188, 156, 0.6) 35%, #1abc9c 35%, #1abc9c 40%, rgba(26, 188, 156, 0.6) 40%, rgba(26, 188, 156, 0.6) 45%, #1abc9c 45%, #1abc9c 50%, rgba(26, 188, 156, 0.6) 50%, rgba(26, 188, 156, 0.6) 55%, #1abc9c 55%, #1abc9c 60%, rgba(26, 188, 156, 0.6) 60%, rgba(26, 188, 156, 0.6) 65%, #1abc9c 65%, #1abc9c 70%, rgba(26, 188, 156, 0.6) 70%, rgba(26, 188, 156, 0.6) 75%, #1abc9c 75%, #1abc9c 80%, rgba(26, 188, 156, 0.6) 80%, rgba(26, 188, 156, 0.6) 85%, #1abc9c 85%, #1abc9c 90%, rgba(26, 188, 156, 0.6) 90%, rgba(26, 188, 156, 0.6) 95%, #1abc9c 95%, #1abc9c 100%);
+  background-position: 0 0;
+  background-size: 100%;
+  transition: background 300ms ease-in-out;
+}
+.first:hover {
+  background-position: 100px;
+}
+
+.second {
+	  background: linear-gradient(-45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), linear-gradient(45deg, rgba(0,0,0,0) 25%, rgba(255,255,255,0.2) 25%, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 75%, rgba(255,255,255,0.2) 75%), rgb(0, 153, 151);
+	  background-position: 0 0;
+  background-size: 100%;
+  transition: background 300ms ease-in-out;
+}
+
+.second: hover {
+	background-position: 100%;
+}
+
+.third {
+	  background: repeating-radial-gradient(
+  circle,
+  purple,
+  purple 10px,
+  #4b026f 10px, 
+  #4b026f 20px
+);
+	  background-position: 0 0;
+  background-size: 100%;
+  transition: background 300ms ease-in-out;
+}
+
+.third: hover {
+	background-position: 100%;
+}
+
+.fourth {
+	  background: repeating-linear-gradient(
+  45deg,
+  rgba(0, 0, 0, 0.2),
+  rgba(0, 0, 0, 0.2) 10px,
+  rgba(0, 0, 0, 0.3) 10px,
+  rgba(0, 0, 0, 0.3) 20px
+),
+url(http://s3-us-west-2.amazonaws.com/s.cdpn.io/3/old_map_@2X.png);
+	  background-position: 0 0;
+  background-size: 100%;
+  transition: background 300ms ease-in-out;
+}
+
+.fourth: hover {
+	background-position: 100%;
+}
+
+div.shot {
+  color: white;
+  clear: both;
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+  height: 300px;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 3px 0 #bc5e19;
+  width: 400px;
+}
+div.shot span:after {
+  background-color: #f97d22;
+  content: "";
+  display: block;
+  height: 74px;
+  position: relative;
+  width: 156px;
+  top: -74px;
+  z-index: -10;
+}
+div.shot span:before {
+  background-color: #bc5e19;
+  content: "";
+  display: block;
+  height: 156px;
+  width: 74px;
+  position: absolute;
+  right: 41px;
+  top: 2px;
+  transform: rotate(90deg) skew(29deg);
+  z-index: -20;
+}
+div.shot span {
+  box-shadow: 4px 5px 5px rgba(0, 0, 0, .7);
+  background-color: transparent;
+  display: block;
+  height: 74px;
+  line-height: 74px;
+  margin: 0 auto 14px;
+  text-align: center;
+  width: 156px;
+  transform: rotate(-11deg) skew(-11deg);
+  position: relative;
+  z-index: 10;
+}
+div.shot span:first-child {
+  margin-top: 24px;
+}
+div.shot span:last-child:before {
+  display: none;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.shot {
+	position: fixed;
+	top: 12%;
+	left: 12%;
+}
+

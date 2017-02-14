@@ -6,6 +6,9 @@
   		<meta name = "viewport" content = "width = device-width, height = device-height, initial-scale = 1.0, user-scalable = no">
         <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         <link rel="stylesheet" href="css/balloon.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href = "css/social.css">
+          <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
       <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       body {
@@ -770,10 +773,47 @@ center
     }
     main.init()</script>
 
+<style>
+ @import url('https://fonts.googleapis.com/css?family=Pacifico');
+ #title{
+ 	font-family: 'Pacifico', cursive;
+ 	font-size: 15vw;
+ 	color: #fff;
+ 	position: fixed;
+ 	top: 1vh;
+ 	left: 15vw;
+ }
+ #title-in{
+ 	font-family: 'Pacifico', cursive;
+ 	position: fixed;
+ 	top: -10vh;
+ 	left: 15vw;
+ }
+ 
+ @media only screen and (max-device-width: 480px) {
+ 	 #title-in{
+ 	 	display: none;
+ 	}
+ }
+ 
+ @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+ #title-in{
+ 	 	display: none;
+ 	}
+
+}
+
+</style>
+
 </head>
 
 
 <body>
+<h1 id = "title">Abhisarga</h1>
 <!--
   <div class="by">
     <div class="by__text by__text--1">demo for</div>
@@ -1329,27 +1369,40 @@ center
           
 <!--          buttons-->
           
-          <a href= "events/index.html">
-              <div data-balloon-length="medium" class="btn1"  data-balloon-pos="left">
+          <!--<a href= "E:\CFest\events\index.html">
+              <div data-balloon-length="medium" class="btn1" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="left">
                   <div class="ripple margin" align="center" ripple-opacity="0.5" ripple-color="url('img/patt.jpg')">
                       <h2 class="noSelect btn-title" style="color: white;">EVENTS</h2>
                   </div>
               </div>
           </a>
 		
-		<a href = "gallery/gallery.html"><div data-balloon-length="medium" class = "btn2"  data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
+		<a href = "gallery.html"><div data-balloon-length="medium" class = "btn2" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
 			<h2 class="noSelect btn-title" style="color: white;">GALLERY</h2>
             </div></div></a>
           
-        <a href="team/team.html" > <div data-balloon-length="medium" class = "btn3"  data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
+        <a href=" E:\CFest\team\team.html" > <div data-balloon-length="medium" class = "btn3" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
 			<h2 class="noSelect btn-title" style="color: white;">OUR TEAM</h2>
               </div></div></a>
           
-          <div data-balloon-length="medium" class = "btn4"  data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
+          <div data-balloon-length="medium" class = "btn4" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="left"><div class="ripple margin" align="center" ripple-opacity = "0.5" ripple-color = "url('img/patt.jpg')">
 			<h2 class="noSelect btn-title" style="color: white;"><a>Reaching Us</a></h2>
-              </div></div>
-          
-          		<script src = "js/ripple.min.js"></script>
+              </div></div>-->
+              
+          <!--<div class="share">
+  <div class="fab na"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+  <div class="fab na"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+  <div class="fab na"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+  <div class="fab na"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+</div>-->
+<h1 id = "title-in">Abhisarga</h1>
+<div class="shot">
+		<span><div class = "first"><a href = "events.html">EVENTS</a></div></span>
+		<span><div class = "second"><a href = "gallery.html">Gallery</a></div></span>
+		<span><div class = "third"><a href = "team.html">OUR TEAM</a></div></span>
+		<span><div class = "fourth"><a href = "#">REACH US</a></div></span>
+	</div>
+          		<!--<script src = "js/ripple.min.js"></script>-->
 
 <!--          buttons-->
           
@@ -3321,6 +3374,9 @@ center
       </div>
     </div>
   </div>
+
+
+<script src = "js/social.js"></script>
 
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.26/howler.min.js'></script>
     <script src = 'https://cdn.jsdelivr.net/mojs/0.119.0/mo.min.js'></script>
