@@ -2,12 +2,154 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  		<meta name="viewport" content="width = device-width, height = device-height, initial-scale = 1.0, user-scalable = yes">
+  		<meta name="viewport" content="width = device-width, height = device-height, initial-scale = 1.0, user-scalable = no">
 <title>Events</title>
-<link rel="stylesheet" href="css/main.css">
-    <link rel = "stylesheet" href = "animate.min.css">
-    <link rel = "stylesheet" href = "normalize.min.css">
-    <link rel="stylesheet" href="hint.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel = "stylesheet" href = "css/animate.min.css">
+    <link rel = "stylesheet" href = "css/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .share, .share:before, .share:after, .fab {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.fab i{
+	margin-left: 30%;
+	margin-top: 25%;
+	color: #fff;
+}
+
+.share {
+  position: fixed;
+  top: 90%;
+  left: 1%;
+  z-index: 5;
+}
+.share:before, .share:after {
+  content: '';
+  will-change: transform;
+}
+.share:before {
+  background: url(http://goo.gl/dVG3Fd) center/28px no-repeat;
+  z-index: 5;
+  transition: 0.3s;
+}
+.share:after {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  -webkit-transition: 0.39s;
+  transition: 0.39s;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.share.active:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.share.active:after {
+  width: 3000px;
+  height: 3000px;
+}
+
+.fab {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: 0.3s down forwards;
+          animation: 0.3s down forwards;
+  opacity: 0;
+  will-change: animation;
+}
+.fab:nth-child(1) {
+  background: #1DA1F2;
+  top: -126px;
+}
+.fab:nth-child(2) {
+  background: #46629E;
+  top: -84px;
+}
+.fab:nth-child(3) {
+  background: #DB4437;
+  top: -42px;
+}
+.fab:nth-child(4) {
+  background: #FF5722;
+}
+.fab.active {
+  -webkit-animation: 0.48s up forwards;
+          animation: 0.48s up forwards;
+}
+.fab.active:nth-child(1) {
+  -webkit-animation-delay: 0.39s;
+          animation-delay: 0.39s;
+}
+.fab.active:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.fab.no {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes up {
+  50% {
+    -webkit-transform: translateY(-170%);
+            transform: translateY(-170%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-130%);
+            transform: translateY(-130%);
+  }
+}
+
+@keyframes up {
+  50% {
+    -webkit-transform: translateY(-170%);
+            transform: translateY(-170%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-130%);
+            transform: translateY(-130%);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(-130%);
+            transform: translateY(-130%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    top: 0;
+  }
+}
+@keyframes down {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(-130%);
+            transform: translateY(-130%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    top: 0;
+  }
+}
+
+    </style>
+
 </head>
 <body>
 
@@ -97,7 +239,7 @@
     
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
     
-    <script src = "animatedModal.min.js"></script>
+    <script src = "js/animatedModal.min.js"></script>
     <script>
     
     $("#event1").animatedModal({
@@ -135,8 +277,8 @@
             })
     
     </script>
-<script src="jquery.reflection.js"></script> 
-<script src="jquery.cloud9carousel.js"></script> 
+<script src="js/jquery.reflection.js"></script> 
+<script src="js/jquery.cloud9carousel.js"></script> 
 <script>
     $(function() {
       var showcase = $("#showcase")
@@ -188,7 +330,20 @@
         }
       } )
     })
-  </script> 
-
+  </script>
+  <!-- Social Buttons -->
+<div class="share">
+  <div class="fab no"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+  <div class="fab no"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+  <div class="fab no"><i class="fa fa-youtube" aria-hidden="true"></i></div>
+  <div class="fab no"><i class="fa fa-google-plus" aria-hidden="true"></i></div>
+</div>
+<script>
+$(".share").on('click', function(e) {
+  $(".fab").removeClass("no")
+  if(e.target != this) return
+  $('.share, .fab').toggleClass("active")
+})
+</script>
 </body>
 </html>
